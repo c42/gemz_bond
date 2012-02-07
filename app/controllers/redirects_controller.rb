@@ -4,6 +4,6 @@ class RedirectsController < ApplicationController
   end
 
   def other
-    redirect_to "http://rubygems.org/#{params[:any_other_url]}"
+    redirect_to "#{Settings.rubygems}/#{params[:any_other_url]}"
   end
 end

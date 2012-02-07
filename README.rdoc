@@ -20,6 +20,7 @@ Short answer: We do lots of page caching with rails (acts as a proxy). We also l
 
 There are three major kinds of HTTP calls that bundler makes to a gem source in the 1.0 series:
 * GET /specs.4.8.gz <-- This is an index of all gems. At the very least, we cache this locally. We also give you the option of filtering out which gems are returned by this call in the gem_server.yml. This is currently 700 kb, and really slow query to parse in memory (which bundle has to do). Page cache me (after optionally filtering out unwanted gems)
+* GET /prerelease_specs.4.8.gz <-- Same as above, but for unreleased gems. Ditto as above
 * GET /quick/Marshal.4.8/foo-1.2.3.gemspec.rz <-- This is what slows down bundler a lot. It keeps polling this to build a graph of gems. This never changes. Page cache me.
 * GET /gems/foo-1.2.3.gem <-- The actual gem. This never changes. Page cache this too :-).
 

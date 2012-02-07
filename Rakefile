@@ -5,3 +5,8 @@
 require File.expand_path('../config/application', __FILE__)
 
 GemzBond::Application.load_tasks
+
+desc "delete all gz caches"
+task :invalidate do
+  sh "rm public/*.gz"
+end

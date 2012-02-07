@@ -1,7 +1,7 @@
 require 'net/http'
 
 class DownloadsController < ApplicationController
-  caches_page :gem
+  caches_page :gem, :list, :gemspecrz
 
   def forward_response response
     case response
@@ -18,5 +18,9 @@ class DownloadsController < ApplicationController
 
   def list
     forward_response get("#{Settings.rubygems}/#{params[:specs]}.4.8.gz")
+  end
+
+  def gemspecrz
+    forward_response get("#{Settings.rubygems}/quick/Marshal.4.8/#{params[:gem_name]}.gemspec.rz")
   end
 end

@@ -1,0 +1,11 @@
+development:
+  rubygems: http://rubygems.org
+  filter_specs: false
+
+test:
+  rubygems: http://rubygems.org
+  filter_specs: false
+
+production:
+  rubygems: http://rubygems.org
+  filter_specs: false

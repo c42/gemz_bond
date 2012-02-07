@@ -17,7 +17,8 @@ class DownloadsController < ApplicationController
   end
 
   def list
-    forward_response get("#{Settings.rubygems}/#{params[:specs]}.4.8.gz")
+    response = get("#{Settings.rubygems}/#{params[:specs]}.4.8.gz")
+    send_data FilterGems.from_gzipped_source(response.body)
   end
 
   def gemspecrz

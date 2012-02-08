@@ -11,7 +11,8 @@ It might, but this is targetted mostly for large teams, and build and deploy age
 == What is the trade off
 
 * The first call will be really really slow (1.5x the time). But you should get speed benefits after that
-* You have to invalidate the specs.gz cache when you want new gems to flow in. This can be done by running: 'RAILS_ENV=production rake recalculate'
+* You have to invalidate the specs.gz cache when you want new gems to flow in. This can be done by running: 
+  RAILS_ENV=production rake recalculate
 * If you filter out gems that should be returned, you will have an extra step if you add a gem to your project.
 
 == How do I use this?

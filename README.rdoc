@@ -14,6 +14,16 @@ It might, but this is targetted mostly for large teams, and build and deploy age
 * You have to invalidate the specs.gz cache when you want new gems to flow in. This can be done by running: 'RAILS_ENV=production rake recalculate'
 * If you filter out gems that should be returned, you will have an extra step if you add a gem to your project.
 
+== How do I use this?
+
+Change the first line of your gemfile to use this as a source
+
+Change from:
+  source :rubygems
+  source "http://rubygems.org"
+to:
+  source "http://my.gemz_bond.server:port"
+
 == How Do I configure this?
 
 Looking at the config/gem_server.yml will provide you the answers you need. There are two configs:

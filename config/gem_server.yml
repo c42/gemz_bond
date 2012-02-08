@@ -1,6 +1,40 @@
 development:
   rubygems: http://rubygems.org
-  filter_specs: [rspec]
+  filter_specs:
+    - actionmailer
+    - actionpack
+    - activemodel
+    - activerecord
+    - activeresource
+    - activesupport
+    - arel
+    - builder
+    - bundler
+    - erubis
+    - hike
+    - i18n
+    - journey
+    - json
+    - mail
+    - mime-types
+    - multi_json
+    - polyglot
+    - rack
+    - rack-cache
+    - rack-ssl
+    - rack-test
+    - rails
+    - railties
+    - rake
+    - rdoc
+    - ruby
+    - secure
+    - settingslogic
+    - sprockets
+    - thor
+    - tilt
+    - treetop
+    - tzinfo
 
 test:
   rubygems: http://rubygems.org

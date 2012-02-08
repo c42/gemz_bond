@@ -26,4 +26,4 @@ There are three major kinds of HTTP calls that bundler makes to a gem source in 
 
 == Copyright
 
-This is Copyright (c) Tejas Dinkar and Flipkart. This is available under the MIT license.
+This is Copyright (c) Tejas Dinkar, C42 Engineering and Flipkart. This is available under the MIT license.

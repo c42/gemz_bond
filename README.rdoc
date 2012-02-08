@@ -17,6 +17,9 @@ It might, but this is targetted mostly for large teams, and build and deploy age
 
 == How do I use this?
 
+Deploy gemz_bond on any machine that is serving passenger. Set the permissions as 777 on the public folder (for page caching):
+  chmod 777 -R public/
+
 Change the first line of your gemfile to use this as a source
 
 Change from:
